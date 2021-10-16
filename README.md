@@ -7,10 +7,24 @@
     * github: https://github.com/mlflow/mlflow
 
 
+## Installing docker/docker-compose
+```sh
+sudo amazon-linux-extras install docker
+sudo service docker start
+sudo chkconfig docker on
+sudo usermod -a -G docker ec2-user
+sudo usermod -a -G docker ssm-user
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+docker-compose version
+```
 
 ## Usage
-
-
+```sh
+wget https://gist.githubusercontent.com/richardsonlima/cac79be243bff8d85ecaae993da3dfb1/raw/480a7fe6a0e5cfa88725d6f68f89a6f0838ce9a5/docker-compose.yaml
+sudo docker-compose up -d
+```
 
 ### Build a Docker image
 
