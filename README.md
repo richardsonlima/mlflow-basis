@@ -15,7 +15,7 @@
 ### Build a Docker image
 
 ```sh
-git clone https://github.com/jiankaiwang/mlflow-basis.git
+git clone https://github.com/richardsonlima/mlflow-basis.git
 cd ./mlflow-basis
 sudo docker build -t mlflow-basis:latest .
 ```
